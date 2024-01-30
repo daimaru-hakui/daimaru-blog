@@ -29,6 +29,7 @@ const LoginForm: FC = () => {
         email,
         password
       );
+      console.log(data);
       const idToken = await userCredential.user.getIdToken();
       await signIn("credentials", {
         idToken,
@@ -44,7 +45,7 @@ const LoginForm: FC = () => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-white shadow-md rounded-xl px-12 pt-6 pb-8 mb-4"
       >
         <div className="text-center mt-2 text-2xl">Login</div>
         <div className="flex flex-col gap-6 mt-3">

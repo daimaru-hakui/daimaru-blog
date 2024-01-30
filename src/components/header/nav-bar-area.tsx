@@ -19,22 +19,22 @@ export default function NavbarArea() {
     <Navbar
       position="sticky"
       maxWidth="md"
-      className="bg-gray-100 w-[calc(100%)]"
+      className="bg-gray-100 w-full"
     >
-      <NavbarContent className="mt-6 px-6 justify-between bg-white shadow-md rounded-lg">
-        <NavbarBrand className="mr-4">
+      <NavbarContent className="w-full justify-between bg-white shadow-md rounded-lg">
+        <NavbarBrand className="pl-4 mr-4">
           <Link href="/">
             <Logo />
           </Link>
         </NavbarBrand>
-
-        <NavbarItem>
-          <Button size="sm" onClick={logout}>logout</Button>
-        </NavbarItem>
-
-        <NavbarItem>
-          <NavDropdown />
-        </NavbarItem>
+        <NavbarContent justify="end">
+          <NavbarItem>
+            <div className="text-sm" onClick={logout}>logout</div>
+          </NavbarItem>
+          <NavbarItem className="pr-6">
+            <NavDropdown />
+          </NavbarItem>
+        </NavbarContent>
       </NavbarContent>
     </Navbar>
   );

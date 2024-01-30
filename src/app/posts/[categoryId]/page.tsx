@@ -18,12 +18,12 @@ export default async function PostCategoryPage({
   });
 
   const data: Posts = await res.json();
-  const posts = data.contents.filter((content)=>(
-    content.category.id === params.categoryId
-  ))
+  const posts = data.contents.filter((content) => (
+    content.category?.id === params.categoryId
+  ));
 
   return (
-    <div className="mx-auto max-w-[calc(750px)]">
+    <div className="mx-auto w-full max-w-[calc(750px)]">
       <PostList posts={posts} />
     </div>
   );

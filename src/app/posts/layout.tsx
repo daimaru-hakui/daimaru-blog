@@ -5,7 +5,7 @@ export default function PostLayout({
 }>) {
   return (
     <div
-      className={`bg-gray-100 flex min-h-screen flex-col items-center justify-between `}
+      className={`w-full mx-auto`}
     >
       {children}
     </div>

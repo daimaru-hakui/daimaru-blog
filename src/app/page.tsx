@@ -39,7 +39,7 @@ export default async function Home() {
   const data: Posts = await res.json();
 
   return (
-    <div className="mx-auto max-w-[calc(750px)]">
+    <div className="mx-auto w-full max-w-[calc(750px)]">
       <PostList posts={data.contents} />
     </div>
   );
