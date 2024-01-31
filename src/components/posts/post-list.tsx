@@ -30,11 +30,6 @@ interface PostList {
 }
 
 export default function PostList({ posts }: PostList) {
-  useEffect(() => {
-    posts.map((post) => {
-      console.log(post.category);
-    });
-  }, []);
   return (
     <div className="grid gap-3 mb-6 w-full">
       {posts.map((post) => (
