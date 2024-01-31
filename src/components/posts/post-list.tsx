@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Card, CardBody, Chip } from "@nextui-org/react";
 import { format } from "date-fns";
 import Link from "next/link";
@@ -30,11 +30,11 @@ interface PostList {
 }
 
 export default function PostList({ posts }: PostList) {
-  useEffect(()=>{
-    posts.map((post)=>{
-      console.log(post.category)
-    })
-  },[])
+  useEffect(() => {
+    posts.map((post) => {
+      console.log(post.category);
+    });
+  }, []);
   return (
     <div className="grid gap-3 mb-6 w-full">
       {posts.map((post) => (
@@ -44,9 +44,15 @@ export default function PostList({ posts }: PostList) {
           className="block"
         >
           <Card className="w-full">
-            <CardBody className="w-full flex flex-col sm:flex-row items-center gap-3">
-              <div className="text-sm">{format(new Date(post.createdAt), "yyyy-MM-dd")}</div>
-               <Chip color="success" variant="bordered">{post.category?.name}</Chip>
+            <CardBody className="w-full flex flex-col sm:flex-row md:items-center gap-3 px-6">
+              <div className="flex flex-row items-center gap-3">
+                <div className="text-sm">
+                  {format(new Date(post.createdAt), "yyyy-MM-dd")}
+                </div>
+                <Chip color="success" variant="bordered">
+                  {post.category?.name}
+                </Chip>
+              </div>
               <div className="truncate">{post.title}</div>
             </CardBody>
           </Card>
