@@ -2,6 +2,7 @@
 import { Card, CardBody, Chip } from "@nextui-org/react";
 import { format } from "date-fns";
 import Link from "next/link";
+import { useEffect } from "react";
 
 interface PostList {
   posts: {
@@ -29,7 +30,11 @@ interface PostList {
 }
 
 export default function PostList({ posts }: PostList) {
-  console.log(posts)
+  useEffect(()=>{
+    posts.map((post)=>{
+      console.log(post.category)
+    })
+  },[])
   return (
     <div className="grid gap-3 mb-6 w-full">
       {posts.map((post) => (

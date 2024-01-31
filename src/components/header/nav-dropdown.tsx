@@ -20,9 +20,10 @@ interface Category {
 
 export default function NavDropdown() {
   const [categories, setCategories] = useState<Category[]>([]);
+
   useEffect(() => {
     const getCategories = async () => {
-      const url = "https://jrk7rmu7lk.microcms.io/api/v1/categories";
+      const url = "https://jrk7rmu7lk.microcms.io/api/v1/categories?limit=20";
       const response = await fetch(url, {
         headers: {
           "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_API_KEY as string,
