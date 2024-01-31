@@ -26,7 +26,7 @@ interface PostShow {
 }
 export default function PostShow({ post }: PostShow) {
   return (
-    <div className="p-6 mb-12 w-full max-w-[calc(720px)] bg-white drop-shadow-sm rounded-lg">
+    <div className="p-6 mb-12 w-full  bg-white rounded-lg">
       <div className="mt-2 text-2xl font-bold">{post.title}</div>
       <div className="flex flex-col sm:flex-row gap-1 sm:gap-3 mt-2 text-gray-700 text-xs">
         <div className="">

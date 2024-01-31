@@ -44,9 +44,11 @@ export default function NavDropdown() {
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         {categories.map((category) => (
-          <DropdownItem key={category.id}><Link href={`/posts/${category.id}`}>{category.name}</Link></DropdownItem>
-))}
-    </DropdownMenu>
-</Dropdown>
-);
+          <DropdownItem key={category.id} className="">
+            <Link href={`/posts/${category.id}`} className="w-full block">{category.name}</Link>
+          </DropdownItem>
+        ))}
+      </DropdownMenu>
+    </Dropdown>
+  );
 }

@@ -19,7 +19,7 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
   const data: any = await res.json();
 
   return (
-    <div className="px-6 mt-12 mx-auto w-full max-w-[calc(750px)]">
+    <div className="mx-auto w-full max-w-[calc(750px)]">
       <PostShow post={data} />
     </div>
   );

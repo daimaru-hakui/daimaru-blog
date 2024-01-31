@@ -22,9 +22,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${inter.className} bg-gray-100  `}>
           <NextUIProviders>
-            <div className="w-full flex min-h-screen flex-col items-center ">
+            <div className="w-full px-3 md:px-6 flex min-h-screen flex-col items-center ">
               <NavbarArea />
-              {children}
+              <div className="mt-12 w-full">{children}</div>
             </div>
           </NextUIProviders>
         </body>

@@ -16,22 +16,20 @@ export default function NavbarArea() {
     await signOut();
   };
   return (
-    <Navbar
-      position="sticky"
-      maxWidth="md"
-      className="bg-gray-100 w-full"
-    >
-      <NavbarContent className="w-full justify-between bg-white shadow-md rounded-lg">
-        <NavbarBrand className="pl-4 mr-4">
+    <Navbar shouldHideOnScroll maxWidth="md" className="mt-6 bg-gray-100 w-full">
+      <NavbarContent className="w-full justify-between rounded-lg">
+        <NavbarBrand className="">
           <Link href="/">
             <Logo />
           </Link>
         </NavbarBrand>
         <NavbarContent justify="end">
           <NavbarItem>
-            <div className="text-sm" onClick={logout}>logout</div>
+            <div className="text-sm cursor-pointer" onClick={logout}>
+              logout
+            </div>
           </NavbarItem>
-          <NavbarItem className="pr-6">
+          <NavbarItem >
             <NavDropdown />
           </NavbarItem>
         </NavbarContent>
