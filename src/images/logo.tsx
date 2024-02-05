@@ -6,7 +6,7 @@ export default function Logo() {
 			x="0px"
 			y="0px"
 			viewBox="0 0 562 138"
-			style={{ width: "180px" }}
+			style={{ width: "170px" }}
 		>
 			<pattern
 				x="-142"
