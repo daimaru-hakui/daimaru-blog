@@ -14,6 +14,7 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
     headers: {
       "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_API_KEY as string,
     },
+    cache:"no-cache"
   });
 
   const data: any = await res.json();

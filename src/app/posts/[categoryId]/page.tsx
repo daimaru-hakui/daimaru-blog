@@ -15,12 +15,13 @@ export default async function PostCategoryPage({
     headers: {
       "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_API_KEY as string,
     },
+    cache: "no-store",
   });
 
   const data: Posts = await res.json();
-  const posts = data.contents.filter((content) => (
-    content.category?.id === params.categoryId
-  ));
+  const posts = data.contents.filter(
+    (content) => content.category?.id === params.categoryId
+  );
   return (
     <div className="mx-auto w-full max-w-[calc(750px)]">
       <PostList posts={posts} />
