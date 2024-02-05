@@ -23,7 +23,7 @@ export default function NavDropdown() {
 
   useEffect(() => {
     const getCategories = async () => {
-      const url = "https://jrk7rmu7lk.microcms.io/api/v1/categories?limit=20";
+      const url = "https://jrk7rmu7lk.microcms.io/api/v1/categories?limit=50";
       const response = await fetch(url, {
         headers: {
           "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_API_KEY as string,
@@ -45,7 +45,7 @@ export default function NavDropdown() {
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         {categories.map((category) => (
-          <DropdownItem key={category.id} className="">
+          <DropdownItem key={category.id} className="" textValue={category.name}>
             <Link href={`/posts/${category.id}`} className="w-full block">{category.name}</Link>
           </DropdownItem>
         ))}

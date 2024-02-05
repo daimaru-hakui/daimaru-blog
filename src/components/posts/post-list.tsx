@@ -42,7 +42,7 @@ export default function PostList({ posts }: PostList) {
             <CardBody className="w-full flex flex-col sm:flex-row md:items-center gap-3 px-6">
               <div className="flex flex-row items-center gap-3">
                 <div className="text-sm">
-                  {format(new Date(post.createdAt), "yyyy-MM-dd")}
+                  {format(post.publishedAt.toString(), "yyyy-MM-dd")}
                 </div>
                 <Chip color="success" variant="bordered">
                   {post.category?.name}

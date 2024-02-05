@@ -30,7 +30,7 @@ export default function PostShow({ post }: PostShow) {
       <div className="mt-2 text-2xl font-bold">{post.title}</div>
       <div className="flex flex-col sm:flex-row gap-1 sm:gap-3 mt-2 text-gray-700 text-xs">
         <div className="">
-          投稿日:{format(new Date(post.createdAt), "yyyy-MM-dd")}
+          投稿日:{format(new Date(post.publishedAt.toString()), "yyyy-MM-dd")}
         </div>
         <div>
           カテゴリー:{post.category?.name}</div>
