@@ -9,6 +9,7 @@ export default async function PostsPage() {
     headers: {
       "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_API_KEY as string,
     },
+    cache: "no-store"
   });
 
   const data: Posts = await res.json();

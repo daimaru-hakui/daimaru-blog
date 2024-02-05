@@ -24,7 +24,7 @@ export default function NavbarArea() {
   };
 
   const clickHandler = async () => {
-    updatePage(categoryId, postId);
+    await updatePage();
   };
 
   return (
@@ -40,7 +40,7 @@ export default function NavbarArea() {
           </Link>
         </NavbarBrand>
         <NavbarContent justify="end">
-          <NavbarItem>
+          {/* <NavbarItem>
             <Tooltip content="更新">
               <button className="flex items-center">
                 <AiOutlineRedo
@@ -49,7 +49,7 @@ export default function NavbarArea() {
                 />
               </button>
             </Tooltip>
-          </NavbarItem>
+          </NavbarItem> */}
           <NavbarItem>
             <div className="text-sm cursor-pointer" onClick={logout}>
               logout
